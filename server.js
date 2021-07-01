@@ -31,7 +31,7 @@ mongoose.connect("mongodb://localhost/mongotube", {
 app.use("/api/items",require("./routes/api/items"))
 
 /// Serve satic  asset if in production
-if(process.env.NOD_ENV === 'production'){
+if(process.env.NODE_ENV === 'production'){
     //set Satitc folder
     app.use(express.static('client/build'));
 
